@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Css Starts */
+
+:root{
+    --ActiveLink :#fff;
+    --sideBarBg: #000;
+    --upperSideBarLink:#b3b3b3;
+    --downSideBarLink:#a7a7a2;
+    --navBarBg: #111;
+    --navBarColor:#a7a7a7;
+    --mainBg:#1e1e1e;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 4.5rem  ;
+    scroll-behavior: smooth;
+}
+
+/* First Pane Starts */
+
+.firstPane{
+    height: 100%;
+    background-color: var(--sideBarBg);
+    overflow: hidden;
+}
+
+.firstPane .sideBarHead{
+    display: flex;
+    align-items: center;
+    padding: 32px 0 48px 32px;
+
+}
+
+.firstPane h3{
+    font-size: 20px;
+}
+
+
+.sideBarHead .headIcon{
+    font-size: 56px;
+    padding: 0 8px 0 0;
+}
+
+.firstPane .sideBarHome{
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 24px;
+
+}
+
+.firstPane .sideBarIcons{
+    font-size: 32px;
+    padding: 0 24px 0 16px;
+}
+
+.firstPane .sideBarSearch{
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 24px;
+}
+.firstPane .sideBarLibrary{
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 24px;
+
+}
+.firstPane .sideBarPlaylist{
+    display: flex;
+    align-items: center;
+    padding: 32px 0 24px 24px;
+
+}
+.firstPane .sideBarLikedsong{
+    display: flex;
+    align-items: center;
+    padding: 0 0 24px 24px;
+
+}
+
+.sideBarFooter{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+}
+
+
+.sideBarFooter a{
+    margin: 16px 16px 16px 32px;
+    font-size: 16px;
+    color: var(--downSideBarLink);
+}
+
+.firstPane button{
+    padding: 9px 19px;
+    background-color: var(--sideBarBg);
+    border: 1px solid rgba(255, 255, 255,.5);
+    border-radius: 29px;
+    font-size: 20px;
+    margin: 3rem 0 0 2rem;
+    transition: 100ms all;
+}
+
+.firstPane button:hover{
+    border: 1px solid var(--ActiveLink);
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.sideBarGlobe{
+    font-size: 20px;
+}
+
+/* First Pane Ends */
+
+/* Resizer Start */
+
+span.Resizer.vertical{
+    width: 7px;
+    cursor: col-resize;
+    box-sizing: border-box;
+    background-color: var(--sideBarBg);
+    z-index: 1;
+}
+
+span.Resizer.vertical:hover{
+    background-color: var(--ActiveLink);
+    opacity: 1;
+    width: 2px;
+}
+
+/* Resizer Ends */
+
+/* Second Pane Start  */
+
+.secondPane{
+    height: 100%;
+    background-color: var(--mainBg) ;
+}
+
+.secondPane .navBar{
+    background-color:  var(--navBarBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 16px 0;
+}
+
+.navBar .navBarAngle{
+    margin: 0 0 16px 28px;
+    padding: 8px 0 0  8px;
+    height: 32px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navBarAngle .navBarIcon{
+    margin: 0 16px 0 0;
+    background-color: black;
+    border-radius: 50%;
+    padding: 4px 14px;
+    font-size: 32px;
+}
+
+.navBar .navBarLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBarLink pre{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    margin: 0 16px 0 16px;
+}
+
+.navBarLink a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 16px 0 16px;
+    font-size: 24px;
+    line-height: 1px;
+    font-weight: 400;
+    color: var(--navBarColor);
+    transition: all 2ms;
+}
+
+.navBarLink a:hover{
+    scale: 1.07;
+    color: var(--ActiveLink);
+}
+
+.navBarLink button{
+    color: var(--sideBarBg);
+    margin: 8px 40px 0 16px;
+    border-radius: 64px;
+    justify-content: center;
+    padding: 15px 35px 15px 35px;
+    font-size: 24px;
+    background-color: var(--ActiveLink);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+
+.navBarLink button:hover{
+    scale: 1.07;
+    cursor: pointer;
+}
+
+.navBarMedia{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+.navBarMedia .navBarMediaIcon{
+    margin: 0 16px 0 16px;
+    font-size: 24px;
+}
+
+.navBarMedia button{
+    padding: 6px 16px;
+    color: var(--navBarBg);
+    border-radius: 20px;
+    background-color: var(--ActiveLink);
+}
+
+#navBarMediaLogo{
+    font-size: 40px;
+}
+
+/* Second Pane End */
+
+
+/* Media Queries Starts */
+
+@media (max-width:320px){
+    html{
+        font-size: 50%;
+    }
+    /* .firstPane{
+        display: none;
+    } */
+
+    .navBarAngle{
+        display: none;
+    }
+
+    .navBarMedia{
+        display: block;
+    }
+}
+
+/* Media Queries Ends */
+
+/* CSS Ends */
